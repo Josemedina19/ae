@@ -1,0 +1,89 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #ff9aa2, #fbc2eb);
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.teclado button {
+    font-size: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ffffffaa;
+    color: #ff3366;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s;
+}
+
+.teclado button:active {
+    transform: scale(0.95);
+}
+
+.oculto {
+    display: none;
+}
+
+.activo {
+    display: block;
+}
+
+.corazones {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+    z-index: 1000;
+}
+
+.corazon {
+    position: absolute;
+    color: red;
+    font-size: 20px;
+    animation: flotar 4s linear forwards;
+    user-select: none;
+    pointer-events: none;
+}
+
+@keyframes flotar {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+input[type="password"] {
+    font-size: 30px;
+    text-align: center;
+    width: 150px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    letter-spacing: 15px;
+    background-color: #fff3f3;
+    color: #ff3366;
+    /* Para móvil ajustar ancho */
+    max-width: 90vw;
+    box-sizing: border-box;
+}
